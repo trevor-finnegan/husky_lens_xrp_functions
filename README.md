@@ -38,6 +38,10 @@ Python scripts implement different behaviors using the same unified architecture
 * Provides bounding boxes (`xCenter`, `yCenter`, `width`, `height`, `id`)
 * Communicates with the robot via I2C (Qwiic)
 
+### Image of Robot:
+
+[<img src="photo\xrp+husky.png" width="375"/>](photo\xrp+husky.png)
+
 ### **System Architecture**
 
 1. HuskyLens performs real-time visual detection and classification.
