@@ -1,5 +1,3 @@
-from lib.XRPLib.defaults import *
-
 #-------------------------------------------------------------------------------
 # HuskyLens Object Tracking (Yaw + Distance, Multi-Color Ensemble, Smoothed)
 #
@@ -17,6 +15,7 @@ import time
 import lib.qwiic_i2c as qwiic_i2c
 import lib.qwiic_huskylens as qwiic_huskylens
 
+from lib.XRPLib.defaults import *
 from lib.XRPLib.differential_drive import DifferentialDrive
 
 print("\nXRP HuskyLens Tracking (Yaw + Distance, Multi-Color, Smoothed) Script\n")

@@ -1,5 +1,3 @@
-from lib.XRPLib.defaults import *
-
 #-------------------------------------------------------------------------------
 # Combined HuskyLens Tag Navigation + "Knock Over Object" (Qwiic-only)
 #
@@ -161,7 +159,7 @@ def ram_object():
     """
 
     global current_state
-    current_state = 1
+    current_state = 0
     align_counter = 0  # counts how many frames in a row we've been centered
 
     # Initial setup
@@ -171,7 +169,7 @@ def ram_object():
     time.sleep(RESTART_WAIT)
     print("Basket logic running...")
 
-    while True:
+    while current_state < 3:
         basket_block = get_basket_block()
 
         # ---------------- State 0: look for the basket ----------------

@@ -1,5 +1,6 @@
-from lib.XRPLib.defaults import *
-
+# ---------------------------------------------------------------------------
+# HuskyLens setup (I2C / Qwiic)
+# ---------------------------------------------------------------------------
 import sys
 import time
 import lib.qwiic_i2c as qwiic_i2c
@@ -9,17 +10,6 @@ from lib.XRPLib.defaults import *
 from lib.XRPLib.differential_drive import DifferentialDrive
 
 drivetrain = DifferentialDrive.get_default_differential_drive()
-
-# ---------------------------------------------------------------------------
-# HuskyLens setup (I2C / Qwiic)
-# ---------------------------------------------------------------------------
-
-# ---------------------------------------------------------------------------
-# Tag-based navigation actions (your original behavior)
-#   1-4: angles to turn
-#   5-8: distances to drive (cm)
-# ---------------------------------------------------------------------------
-actions = [None, 82, -82, 45, -45, 5, 10, 100, 200]
 
 # XRP Final board: Qwiic0 uses I2C0 with SDA=4, SCL=5
 i2c = qwiic_i2c.getI2CDriver(sda=4, scl=5)
@@ -33,6 +23,13 @@ if not my_husky.connected:
 print("HuskyLens connected!")
 
 print("\nXRP HuskyLens + Knock-Over Behavior (Qwiic-only) Script\n")
+
+# ---------------------------------------------------------------------------
+# Tag-based navigation actions (your original behavior)
+#   1-4: angles to turn
+#   5-8: distances to drive (cm)
+# ---------------------------------------------------------------------------
+actions = [None, 82, -82, 45, -45, 5, 10, 100, 200]
 
 # available variables from defaults: left_motor, right_motor, drivetrain,
 #      imu, rangefinder, reflectance, servo_one, board, webserver
