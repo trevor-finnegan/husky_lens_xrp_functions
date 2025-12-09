@@ -70,7 +70,7 @@ Python scripts implement different behaviors using the same unified architecture
 
 ### **track_object.py**
 
-**Goal:** Real-time multi-color tracking with adjustable distance maintenance.
+**Goal:** Real-time object tracking with adjustable distance maintenance (using color detection).
 
 **Behavior:**
 
